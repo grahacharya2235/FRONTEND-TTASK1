@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 30px;
+            box-sizing: border-box;
+            min-height: 100vh;
+            background-color: maroon;
+        }
+        .game-container{
+            background-color: antiquewhite;
+            padding: 50px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1{
+            color: rgb(0, 0, 0);
+            margin-bottom: 15px;
+        }
+        h5 {
+            font-size: x-large;
+            margin-bottom: 20px;
+        }
+        input[type="number"]{
+            width: 200px;
+            padding: 10px;
+            margin: 1px;
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: larger;
+        }
+        button{
+            background-color: blueviolet;
+            color: cornsilk;
+            padding: 10px 10px;
+            cursor: pointer;
+            font-size: medium;
+            margin-top: 10px;
+        }
+        button:hover{
+            background-color: rgb(71, 26, 113);
+        }
+        #feedback{
+            font-size: medium;
+            font-weight: bold;
+            margin-top: 20px;
+            min-height: 1.5mm;
+        }
+        .feedback-correct{
+            color: green;
+        }
+        .feedback-low{
+            color: red;
+        }
+        .feedback.high{
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Guess the Number</h1>
+        <h5>I'm thinking of a number between 1 and 20. Can you guess it?</h5>
+        <input type="number"
+            id="userGuess"
+            min="1"
+            max="20"
+            placeholder="Enter your Guess.">
+        
+        <button onclick="checkGuess()"> Submit Guess </button>
+
+        <p id="feedback"></p>
+
+        <button onclick="resetgame()" id="playAgainButton" style="display: none;">Play Again.</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
